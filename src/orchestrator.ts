@@ -63,9 +63,9 @@ hooks: {
         maxBudgetUsd: this.options.maxBudgetUsd,
         mcpServers: mcpServersConfig,
         agents: {
-          codeQualityAnalyzer,
-          testCoverageAnalyzer,
-          refactoringSuggester,
+          'code-quality-analyzer': codeQualityAnalyzer,
+          'test-coverage-analyzer': testCoverageAnalyzer,
+          'refactoring-suggester': refactoringSuggester,
         },
         allowedTools: [
           'Task',

@@ -56,6 +56,18 @@ async function main() {
     process.exit(1);
   }
 
+const githubToken = process.env.GITHUB_TOKEN;
+
+if (!githubToken) {
+  console.error(
+    'Error: GITHUB_TOKEN is required for GitHub MCP access.\n' +
+    'Create a GitHub personal access token with repo/read access and set it in .env.\n' +
+    'Example: GITHUB_TOKEN=ghp_your_token_here'
+  );
+  process.exit(1);
+}
+
+
   try {
     console.log(`🔍 Reviewing ${owner}/${repo} PR #${prNumber}...`);
 
